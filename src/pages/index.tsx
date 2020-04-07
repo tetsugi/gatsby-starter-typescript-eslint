@@ -1,7 +1,7 @@
-import React from "react"
+import { css } from "@emotion/core"
 import Helmet from "@/components/Helmet"
 import Layout from "@/layouts/Layout"
-import { css } from "@emotion/core"
+import React from "react"
 
 const IndexPage: React.FC = () => (
   <Layout>

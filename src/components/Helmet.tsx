@@ -1,6 +1,6 @@
+import { StaticQuery, graphql } from "gatsby"
 import React from "react"
 import ReactHelmet from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
 import type { HelmetQuery } from "types/graphql"
 
 type HelmetProps = {
