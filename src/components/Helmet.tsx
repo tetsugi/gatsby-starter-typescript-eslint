@@ -26,6 +26,7 @@ const Helmet: React.FC<HelmetProps> = ({
   title = "",
   description = "",
   meta = [],
+  children,
 }) => (
   <StaticQuery
     query={ helmetQuery }
@@ -47,7 +48,9 @@ const Helmet: React.FC<HelmetProps> = ({
               content: description || siteMetadata?.description,
             },
           ]}
-        />
+        >
+          {children}
+        </ReactHelmet>
       )
     }}
   />
