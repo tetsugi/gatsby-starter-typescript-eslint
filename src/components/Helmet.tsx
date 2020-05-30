@@ -1,14 +1,11 @@
 import { StaticQuery, graphql } from "gatsby"
 import React from "react"
-import ReactHelmet from "react-helmet"
+import ReactHelmet, { HelmetProps as ReactHelmetProps } from "react-helmet"
 import type { HelmetQuery } from "types/graphql"
 
 type HelmetProps = {
-  lang?: string;
-  title?: string;
   description?: string;
-  meta?: object[];
-}
+} & ReactHelmetProps
 
 export const helmetQuery = graphql`
   query Helmet {
@@ -22,11 +19,12 @@ export const helmetQuery = graphql`
 `
 
 const Helmet: React.FC<HelmetProps> = ({
-  lang = "ja",
+  htmlAttributes,
   title = "",
   description = "",
   meta = [],
   children,
+  ...props
 }) => (
   <StaticQuery
     query={ helmetQuery }
@@ -35,7 +33,8 @@ const Helmet: React.FC<HelmetProps> = ({
 
       return (
         <ReactHelmet
-          htmlAttributes={{ lang }}
+          {...props}
+          htmlAttributes={htmlAttributes ?? { lang: "ja" }}
           title={
             title
               ? `${title} | ${siteMetadata?.title}`
@@ -46,7 +45,7 @@ const Helmet: React.FC<HelmetProps> = ({
             {
               name: "description",
               content: description || siteMetadata?.description,
-            },
+            } as JSX.IntrinsicElements["meta"],
           ]}
         >
           {children}
