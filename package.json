@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "gatsby-starter-typescript-eslint",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple gatsby starter that can use TypeScript and ESLint",
   "scripts": {
     "dev": "gatsby develop",
@@ -24,29 +24,29 @@
   "author": "tetsugi",
   "license": "MIT",
   "dependencies": {
-    "@emotion/core": "^10.0.28",
+    "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
-    "gatsby": "^2.20.9",
-    "gatsby-plugin-emotion": "^4.2.1",
-    "gatsby-plugin-graphql-codegen": "^2.7.0",
-    "gatsby-plugin-react-helmet": "^3.2.1",
-    "gatsby-plugin-typescript": "^2.3.1",
-    "modern-css-reset": "^1.1.0",
+    "gatsby": "^2.24.64",
+    "gatsby-plugin-emotion": "^4.3.11",
+    "gatsby-plugin-graphql-codegen": "^2.7.1",
+    "gatsby-plugin-react-helmet": "^3.3.11",
+    "gatsby-plugin-typescript": "^2.4.20",
+    "modern-css-reset": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
     "@hot-loader/react-dom": "^16.13.0",
-    "@types/node": "^13.9.8",
-    "@types/react-helmet": "^5.0.15",
-    "@typescript-eslint/eslint-plugin": "^2.26.0",
-    "@typescript-eslint/parser": "^2.26.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0",
+    "@types/node": "^13.13.21",
+    "@types/react-helmet": "^5.0.16",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-react": "^7.21.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
-    "ts-node": "^8.8.2",
-    "typescript": "^3.8.3"
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
   }
 }
